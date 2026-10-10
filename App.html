@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Registration & Result Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Student Registration & Result Management System</h1>
+        <p>Register students and manage their examination results</p>
+    </header>
+
+    <main class="container">
+
+        <!-- Registration Form -->
+        <section class="card">
+
+            <h2>Student Registration</h2>
+
+            <form id="studentForm">
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="studentName">Student Name</label>
+                        <input
+                            type="text"
+                            id="studentName"
+                            placeholder="Enter student name"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="rollNumber">Roll Number</label>
+                        <input
+                            type="text"
+                            id="rollNumber"
+                            placeholder="Enter roll number"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Enter email"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="course">Course</label>
+
+                        <select id="course" required>
+                            <option value="">Select Course</option>
+                            <option value="BCA">BCA</option>
+                            <option value="MCA">MCA</option>
+                            <option value="BSc IT">BSc IT</option>
+                            <option value="BTech">BTech</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <h3>Enter Marks</h3>
+
+                <div class="marks-grid">
+
+                    <div class="form-group">
+                        <label for="html">HTML</label>
+                        <input
+                            type="number"
+                            id="html"
+                            min="0"
+                            max="100"
+                            placeholder="0 - 100"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="css">CSS</label>
+                        <input
+                            type="number"
+                            id="css"
+                            min="0"
+                            max="100"
+                            placeholder="0 - 100"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="javascript">JavaScript</label>
+                        <input
+                            type="number"
+                            id="javascript"
+                            min="0"
+                            max="100"
+                            placeholder="0 - 100"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dbms">DBMS</label>
+                        <input
+                            type="number"
+                            id="dbms"
+                            min="0"
+                            max="100"
+                            placeholder="0 - 100"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="python">Python</label>
+                        <input
+                            type="number"
+                            id="python"
+                            min="0"
+                            max="100"
+                            placeholder="0 - 100"
+                            required
+                        >
+                    </div>
+
+                </div>
+
+                <button type="submit" class="btn">
+                    Generate Result
+                </button>
+
+            </form>
+
+            <p id="errorMessage" class="error"></p>
+
+        </section>
+
+
+        <!-- Result Section -->
+        <section id="resultSection" class="card result-section">
+
+            <h2>Student Result</h2>
+
+            <div id="result"></div>
+
+        </section>
+
+
+        <!-- Saved Records -->
+        <section class="card">
+
+            <div class="records-header">
+                <h2>Saved Student Records</h2>
+
+                <button
+                    id="clearAll"
+                    class="delete-all"
+                >
+                    Clear All
+                </button>
+            </div>
+
+            <div id="records"></div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Student Result Management System | HTML5 • CSS3 • JavaScript</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
