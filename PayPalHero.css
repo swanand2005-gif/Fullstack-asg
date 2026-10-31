@@ -1,0 +1,182 @@
+/* PayPal Open Hero Section Styles */
+.pp-hero {
+  width: 100%;
+  background-color: #ffffff;
+  color: #0c0c0d;
+  font-family: var(
+    --pp-font-sans,
+    'PayPal Open',
+    'PayPal Sans',
+    'Inter',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif
+  );
+  padding: 5.5rem 1.5rem 6rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+
+.pp-hero-container {
+  width: 100%;
+  max-width: 54rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Segmented Toggle Switch (Personal | Business) */
+.pp-segment-switch {
+  display: inline-flex;
+  align-items: center;
+  background-color: #eef1f6;
+  padding: 0.375rem;
+  border-radius: 9999px;
+  gap: 0.25rem;
+  margin-bottom: 3.75rem;
+}
+
+.pp-segment-btn {
+  appearance: none;
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #5e6773;
+  padding: 0.6875rem 1.625rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease;
+  line-height: 1.2;
+}
+
+.pp-segment-btn:hover:not(.active) {
+  color: #0c0c0d;
+}
+
+.pp-segment-btn.active {
+  background-color: #ffffff;
+  color: #000000;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.pp-segment-btn:focus-visible {
+  outline: 2px solid #0070ba;
+  outline-offset: 2px;
+}
+
+/* Hero Display Title */
+.pp-hero-title {
+  font-family: inherit;
+  font-size: clamp(3.25rem, 6.8vw, 5.375rem);
+  font-weight: 800;
+  line-height: 1.06;
+  letter-spacing: -0.04em;
+  color: #000000;
+  margin: 0 0 1.25rem;
+}
+
+/* Hero Subtitle */
+.pp-hero-subtitle {
+  font-family: inherit;
+  font-size: clamp(1.25rem, 2.2vw, 1.6875rem);
+  font-weight: 800;
+  line-height: 1.28;
+  letter-spacing: -0.02em;
+  color: #000000;
+  margin: 0 0 1.25rem;
+}
+
+/* Hero Body Description */
+.pp-hero-description {
+  font-family: inherit;
+  font-size: clamp(0.95rem, 1.3vw, 1.0625rem);
+  font-weight: 400;
+  line-height: 1.55;
+  color: #111827;
+  max-width: 46rem;
+  margin: 0 0 2.25rem;
+}
+
+/* Hero CTA Button Group */
+.pp-hero-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.875rem;
+}
+
+.pp-hero-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  padding: 0.875rem 1.75rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition:
+    background-color 0.2s ease,
+    transform 0.15s ease;
+}
+
+.pp-hero-btn-primary {
+  background-color: #000000;
+  color: #ffffff;
+  border: 1.5px solid #000000;
+}
+
+.pp-hero-btn-primary:hover {
+  background-color: #1f2328;
+  border-color: #1f2328;
+}
+
+.pp-hero-btn-secondary {
+  background-color: #eef1f6;
+  color: #000000;
+  border: 1.5px solid transparent;
+}
+
+.pp-hero-btn-secondary:hover {
+  background-color: #e2e6ee;
+}
+
+.pp-hero-btn:active {
+  transform: scale(0.98);
+}
+
+@media (max-width: 640px) {
+  .pp-hero {
+    padding: 3.5rem 1.25rem 4rem;
+  }
+
+  .pp-segment-switch {
+    margin-bottom: 2.5rem;
+  }
+
+  .pp-hero-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .pp-hero-btn {
+    width: 100%;
+    max-width: 18rem;
+  }
+}
+
